@@ -52,3 +52,10 @@
     sudo dpkg --install ~/Downloads/atom-amd64.deb 
     sudo apt-get install -f
     xiwi -T atom
+
+    # install latest Go
+    sudo apt-get update
+    sudo apt-get -y upgrade
+    curl -O https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
+    sudo tar -C /usr/local -xzf go1.7.1.linux-amd64.tar.gz
+    vim ~/.profile    # and add /usr/local/go/bin to the PATH
