@@ -27,7 +27,12 @@
 
     sudo apt-get update
     sudo apt-get upgrade
-    sudo apt-get install manpages           # how do we install core system manpages?
+    
+    # Install manpages for all existing packages
+    sudo apt-get install man
+    sudo dpkg -l | grep '^ii ' | sed 's/  */\t/g' |cut -f 2,3 | sed 's/\t/=/' | xargs sudo apt-get install --reinstall -y --ignore-missing
+    
+    # Install more tools
     sudo apt-get install tmux vim git
 
     # Install nvm and node.js
