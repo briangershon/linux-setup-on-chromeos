@@ -25,7 +25,9 @@
     
 ## Install Packages
 
-    sudo apt-get update sudo apt-get upgrade sudo apt-get install
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install manpages           # how do we install core system manpages?
     sudo apt-get install tmux vim git
 
     # Install nvm and node.js
