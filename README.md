@@ -66,3 +66,9 @@
     curl -O https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
     sudo tar -C /usr/local -xzf go1.7.1.linux-amd64.tar.gz
     vim ~/.profile    # and add /usr/local/go/bin to the PATH
+
+## Copy and Paste betweeen Chrome windows and Terminal windows
+
+Use `shift-ctrl-c` and `shift-ctrl-v` for universal copy/paste in both Chrome and shell windows.
+
+*(`ctrl-c`, `ctrl-v` work inside Chrome, but not in the shell window)*
