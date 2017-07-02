@@ -1,4 +1,27 @@
-# Ubuntu Setup on ChromeOS
+# Linux Setup on ChromeOS
+
+Tested on Toshiba Chromebook 2 (2015) CB30/CB35 (GANDOF) (Intel Broadwell)
+
+Here are two options:
+
+* Replace ChromeOS with Linux
+
+* Run Ubuntu Shell on ChromeOS via Crouton
+
+I initially went the Crouton route (to support ChromeOS and Linux together) but replaced with Linux
+to use additional tools like Docker, and a formal terminal.
+
+# Replacing ChromeOS with Linux
+
+I decided to use a light-weight Linux specifically for Chromebooks: GalliumOS.
+
+I used Etcher on OSX to create a bootable USB with https://galliumos.org (instead of Mint).
+
+Then followed these instructions to boot from USB and replace ChromeOS with Linux:
+
+http://www.fascinatingcaptain.com/howto/install-linux-mint-on-a-chromebook-with-a-separate-home-drive/
+
+# Run Ubuntu via Crouton
 
 ## Useful resources
 
@@ -13,7 +36,7 @@
 
     # if you need to add something else
     sudo sh ~/Downloads/crouton -u -t extension
-    
+
     # create another chroot with -n
     sudo sh ~/Downloads/crouton -n another -t core,cli-extra,xorg,audio,extension
 
@@ -22,16 +45,16 @@
     # Ctrl-Alt-t
     shell
     sudo enter-chroot
-    
+
 ## Install Packages
 
     sudo apt-get update
     sudo apt-get upgrade
-    
+
     # Install manpages for all existing packages
     sudo apt-get install man
     sudo dpkg -l | grep '^ii ' | sed 's/  */\t/g' |cut -f 2,3 | sed 's/\t/=/' | xargs sudo apt-get install --reinstall -y --ignore-missing
-    
+
     # Install more tools
     sudo apt-get install tmux vim git
 
@@ -52,11 +75,11 @@
 
     # generate key for github access
     ssh-keygen -t rsa -b 4096
-    cat ~/.ssh/id_rsa.pub 
+    cat ~/.ssh/id_rsa.pub
     # add key to github
 
     # setup and run Atom
-    sudo dpkg --install ~/Downloads/atom-amd64.deb 
+    sudo dpkg --install ~/Downloads/atom-amd64.deb
     sudo apt-get install -f
     xiwi -T atom
 
