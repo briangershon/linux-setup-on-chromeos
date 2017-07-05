@@ -67,8 +67,8 @@ http://www.fascinatingcaptain.com/howto/install-linux-mint-on-a-chromebook-with-
 
     # set up a git repo
     git init
-    git config user.name
-    git config user.email
+    git config --global user.name "<value here>"
+    git config --global user.email <value here>
 
     vim ~/.bashrc
     # add: alias s="git status"
@@ -79,8 +79,8 @@ http://www.fascinatingcaptain.com/howto/install-linux-mint-on-a-chromebook-with-
     # add key to github
 
     # setup and run Atom
+    # download atom-amd64.deb from https://github.com/atom/atom/releases
     sudo dpkg --install ~/Downloads/atom-amd64.deb
-    sudo apt-get install -f
     xiwi -T atom
 
     # install latest Go
@@ -88,7 +88,7 @@ http://www.fascinatingcaptain.com/howto/install-linux-mint-on-a-chromebook-with-
     sudo apt-get -y upgrade
     curl -O https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz
     sudo tar -C /usr/local -xzf go1.7.1.linux-amd64.tar.gz
-    vim ~/.profile    # and add /usr/local/go/bin to the PATH
+    vim ~/.bashrc    # and add PATH=/usr/local/go/bin:$PATH
 
 ## Copy and Paste betweeen Chrome windows and Terminal windows
 
