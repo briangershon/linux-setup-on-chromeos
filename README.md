@@ -13,13 +13,11 @@ to use additional tools like Docker, and a formal terminal.
 
 # Replacing ChromeOS with Linux
 
-I decided to use a light-weight Linux specifically for Chromebooks: GalliumOS.
-
-I used Etcher on OSX to create a bootable USB with https://galliumos.org (instead of Mint).
-
-Then followed these instructions to boot from USB and replace ChromeOS with Linux:
+Instructions to boot Linux Mint from USB and replace ChromeOS:
 
 http://www.fascinatingcaptain.com/howto/install-linux-mint-on-a-chromebook-with-a-separate-home-drive/
+
+If your laptop battery drains all the way down, you will lose ability to boot it. These instructions will allow you to set the necessary nvram flag and boot again: https://dev.chromium.org/chromium-os/developer-information-for-chrome-os-devices/workaround-for-battery-discharge-in-dev-mode
 
 # Run Ubuntu via Crouton
 
